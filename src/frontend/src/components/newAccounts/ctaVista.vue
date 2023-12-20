@@ -14,13 +14,20 @@
         tiene un
          costo de $400 pesos.
       </p>
-      <img src="../assets/pinerasaltando.jpg">
+      
+      <v-img   
+         :height="260"
+         aspect-ratio="16/9"
+        src="https://i.ibb.co/Rggjd6s/pinerasaltando.png"
+        class="d-flex align-center"
+        >
+      </v-img>
+
+
+
       <h3 class="texto"> Proporciona tu rut para confirmar</h3>
 
-      
-
-
-
+    
       <div class="contenedor">
         <div class="casilla">
           <v-text-field label="Rut" class="labelnum" v-model="idUsuario"></v-text-field>
