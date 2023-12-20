@@ -8,13 +8,12 @@
             <v-toolbar-title><strong>Banco Tusunami</strong></v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items>
-                <v-col style="height:100%">
-                    <router-link to="/registroUsuario"><v-btn variant="outlined" @click="routerRegistro" rounded>Abre Tu Cuenta</v-btn></router-link>
+                <v-col>
+                    <router-link class="barButton" to="/registroUsuario"><v-btn variant="outlined" @click="routerRegistro" rounded>Abre Tu Cuenta</v-btn></router-link>
                 </v-col>
-                <v-col style="height:100%">
-                    <v-btn variant="outlined" rounded><router-link to="login">Ingresar</router-link></v-btn>
+                <v-col>
+                    <router-link class="barButton" to="/login"><v-btn variant="outlined" rounded>Ingresar</v-btn></router-link>
                 </v-col>
-                <v-col></v-col>
             </v-toolbar-items>
         </v-toolbar>
         <v-content>
@@ -217,3 +216,11 @@
         </v-content>
     </v-app>
 </template>
+
+<style scoped>
+    .barButton{
+        margin-right: 10px;
+        height: 40px;
+    }
+
+</style>

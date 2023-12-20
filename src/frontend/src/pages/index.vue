@@ -7,9 +7,9 @@
 
 <script setup>
 import indexBody from '../components/index/indexBody.vue'
-import cuentas from '../pages/cuentas.vue'
 
 </script>
+
 <template>
     <indexBody class="index"></indexBody> <!-- contenido del landing page-->
 </template>
