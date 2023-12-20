@@ -111,7 +111,7 @@ export default {
 							icon: 'success',
 							title: 'Ha sido registrado',
 						})
-						this.$router.push({ path: '/cuentas' })
+						this.$router.push({ path: '/creacioncuentas' })
 
 					} else {
 
