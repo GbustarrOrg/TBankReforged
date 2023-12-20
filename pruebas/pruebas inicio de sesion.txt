@@ -53,3 +53,50 @@ Pruebas de botón de inicio de sesión con google:
 Pruebas de boton inicio de sesión con facebook:
 * al presionarlo redirecciona a facebook:  respuesta esperada: redireccionamiento
 * al presionarlo no redirecciona a facebook: respuesta esperada: no hay respuesta
+
+Pruebas de escenario de Registro Usuario:
+
+Caso esperado
+    1a  U: Ingresa Nombre completo          //cumple
+        U: Ingresa Rut                      //cumple
+    1b  U: Presiona Boton Iniciar Sesion    //cumple
+    2a  A: Verifica Rut valido              //cumple
+    3a  U: Ingresa Correo                   //cumple
+    4a  A: Verifica Correo valido           //cumple
+    5a  U: Ingresa Contraseña               //cumple
+    6a  A: Verifica Contraseña valida       //cumple
+    7a  U: Ingresa Sucursal                 //cumple
+    8a  A: Verifica Ingreso de Sucursal     //cumple
+    9a  U: Presiona Boton Registrate        //cumple
+
+Casos de error
+    2aa A: Verifica Rut invalido            //cumple
+        A: Muestra mensaje de error         //cumple
+    2ab A: Verifica Rut En Uso              //cumple
+        A: Muestra mensaje de error         //no cumple
+    4aa A: Verifica Correo invalido         //cumple
+        A: Muestra mensaje de error         //cumple
+    4ab A: Verifica Correo En Uso           //cumple
+        A: Muestra mensaje de error         //Cumple a medias
+    6aa A: Verifica Contraseña invalida     //cumple
+        A: Muestra mensaje de error         //cumple
+    7aa A: Verifica Sucursal vacia          //No cumple
+        A: Muestra mensaje de error         //Cumple
+
+Pruebas de escenario de Crear Cuenta Vista:
+
+Caso esperado
+    1a  U: Ingresa Rut                      //cumple
+        U: Ingresa Digito Verificador       //cumple
+    2a  A: Verifica Rut valido              //No cumple
+        A: Verifica Digito Verificador valido   //Cumple
+        A: Verifica que el rut corresponda al usuario //No cumple
+    3a  U: Presiona Boton Contratar         //No cumple
+
+Casos de error
+    2aa A: Verifica Rut invalido            //No Cumple
+        A: Muestra mensaje de error         //No Cumple
+    2ab A: Verifica Digito Verificador invalido  //Cumple
+        A: Muestra mensaje de error              //Cumple
+    2ac A: Verifica que el rut no corresponda al usuario //No Cumple
+        A: Muestra mensaje de error         //No Cumple
