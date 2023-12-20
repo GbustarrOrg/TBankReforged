@@ -22,34 +22,25 @@ const routes = [
     name: 'home',
     component: () => import('./pages/home.vue'),
   },
-  {
-    path: '/cuentas',
-    name: 'cuentas',
-    component: () => import('./pages/cuentas.vue'),
-  },
-
-  {
-    path: '/registroUsuario',
-    name: 'registro',
-    component: () => import('./pages/registroUsuario.vue'),
-  },
 
   {
     path: '/login',
     name: 'login',
     component: () => import('./components/Login/LoginPage.vue')
-  },{
+  },
+  {
     path: '/creacioncuenta',
     name: 'creacioncuenta',
     component: () => import('./pages/creacioncuenta.vue'),
   },
- 
-
   {
-    path: '/registro',
-    name: 'registro',
-    component: () => import('./components/Register/RegisterPage.vue') 
-  }
+    path: '/registrousuario',
+    name: 'registrousuario',
+    component: () => import('./pages/registroUsuario.vue'),
+  },
+
+
+ 
 
 ];
 

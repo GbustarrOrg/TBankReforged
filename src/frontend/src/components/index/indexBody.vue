@@ -9,7 +9,7 @@
             <v-spacer></v-spacer>
             <v-toolbar-items>
                 <v-col style="height:100%">
-                    <router-link to="/registro"><v-btn variant="outlined" @click="routerRegistro" rounded>Abre Tu Cuenta</v-btn></router-link>
+                    <router-link to="/registroUsuario"><v-btn variant="outlined" @click="routerRegistro" rounded>Abre Tu Cuenta</v-btn></router-link>
                 </v-col>
                 <v-col style="height:100%">
                     <v-btn variant="outlined" rounded><router-link to="login">Ingresar</router-link></v-btn>
