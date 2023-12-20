@@ -1,9 +1,7 @@
-<!--Contenido del formulario de login-->
-<!-- Debe contener la logica para redireccionar hacia home.vue si existe un login correcto-->
-
-
-
 <template>
+  <row>
+    <router-link to="/"><v-btn>Volver al Inicio</v-btn></router-link>
+  </row>
   <div >
     <div class="contenedor">
       <div class="columna1">
@@ -19,18 +17,6 @@
           <div class="fila"
             style="text-align: center;color:#0f45ab; margin-top: 30px;font-weight: 800;font-size: 30px;">
             Inicia Sesión
-          </div>
-
-          <div class="fila">
-            <div class="login-buttons">
-              <button @click="iniciarSesionConGoogle" class="login-button google-button" ><i class="pi pi-google" style="color: white"></i>Iniciar Sesión con Google</button>
-              <button class="login-button facebook-button"><i class="pi pi-facebook" style="color: white"></i>Iniciar Sesión con Facebook</button>
-            </div>
-          </div>
-
-          <div class="fila"
-            style="text-align: center;color: #0f45ab; margin-top: 30px;font-weight: 800;font-size: 30px;">
-            -o-
           </div>
           <div class="fila">
             <div class="input-container">
@@ -49,10 +35,7 @@
             <button class="boton-iniciar-sesion" @click="login">Iniciar Sesión</button>
           </div>
           <div class="fila" style="color: #0f45ab;font-weight: 800;">
-            <p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
-            <transition-group name="p-message" tag="div">
-              <Message v-for="msg of mensajes" :key="msg.id" :severity="msg.severity">{{ msg.content }}</Message>
-            </transition-group>
+            <p>¿No tienes una cuenta? <router-link to="/registro"><a href="#">Registrate</a></router-link></p>
           </div>
         </div>
       </div>
@@ -64,6 +47,7 @@
     import API from '@/API.js';
     import Message from 'primevue/message';
     import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import Swal from 'sweetalert2';
 
     export default{
         data () {
@@ -79,7 +63,8 @@
     methods: {
 
         validarFormato(vrut){
-            const rutRegex = /^[0-9]+[-|‐]{1}[0-9kK]{1}$/;
+            // debe tener punto y guion
+            var rutRegex = new RegExp("[0-9]{7,8}-[0-9kK]{1}");
             // Validar el formato
             if (rutRegex.test(vrut)) {
               console.log("valido")
@@ -93,12 +78,6 @@
               }, 2000);
               return false;
             }
-        },
-        successMessage() {
-            this.mensajes.push({ severity: 'success', content: 'Inicio de sesión exitoso, redirigiendo...', id: this.count++ });
-        },
-        failedMessage() {
-            this.mensajes.push({ severity: 'error', content: 'Inicio de sesión fallido', id: this.count++ });
         },
         async funcion(){
           const texto1=document.getElementById("rut").value;
@@ -115,13 +94,21 @@
                 "password": password
             })
             .then((result) => {
-                if(rut != "" && password != "" && this.validarFormato(rut) && result.resplogin){
-                  this.successMessage();
+                if(password != "" && rut != "" && this.validarFormato(rut) && result.resplogin){
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Inicio de Sesión',
+                    text: 'Inicio de sesión exitoso',
+                  });
                   this.$router.push('/home');
-                }else{
-                    this.failedMessage();
-                }	
-            })
+                } else {
+                  Swal.fire({
+                  icon: 'error',
+                  title: 'Error de Registro',
+                  text: 'Rut o correo incorrecto',
+                  });
+                }
+              }) 
             .catch((err) => {
                 console.log(err)
             }); 
