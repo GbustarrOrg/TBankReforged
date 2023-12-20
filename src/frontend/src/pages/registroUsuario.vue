@@ -7,7 +7,14 @@
 				<br>Tusunami
 			</div>
 			<div class="columna">
-				<img src="" alt="Logo" style="width: 100%;height: 100%;">
+				<v-img   
+         :height="600"
+         aspect-ratio="16/9"
+        src="https://i.ibb.co/TPnDXDR/pinera.png"
+        
+        >
+      </v-img>
+				
 			</div>
 		</div>
 		<div class="form-container">
