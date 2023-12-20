@@ -18,7 +18,7 @@
         <card class="contenedor">
             <div>
                 <div class="d-flex align-center" style="border-bottom: 2px solid #ffff">
-                    <img src="../icons/Pitufo.jpg" class="icono">
+                    <img src="https://i.ibb.co/Q8yDP2n/pitufo.jpg" class="icono">
                     <v-col>
                         <v-btn size="x-large" variant="text" style="color:#ffff; width:100%">
                             Inicio
@@ -26,7 +26,7 @@
                     </v-col>
                 </div>
                 <div class="d-flex align-center" style="border-bottom: 2px solid #ffff">
-                    <img src="../icons/Cuentas.jpg" class="icono">
+                    <img src="https://i.ibb.co/qYcYq3b/Cuentas.jpg" class="icono">
                     <v-col>
                         <v-menu
                             location="end"
@@ -54,7 +54,7 @@
                     </v-col>
                 </div>
                 <div class="d-flex align-center" style="border-bottom: 2px solid #ffff; width:100%">
-                    <img src="../icons/Bob.jpg" class="icono">
+                    <img src="https://i.ibb.co/t3JD31B/Bob.jpg" class="icono">
                     <v-col>
                         <v-btn size="x-large"  variant="text" style="color:#ffff; width:100%">
                             Retiros
@@ -62,7 +62,7 @@
                     </v-col>
                 </div>
                 <div class="d-flex align-center" style="border-bottom: 2px solid #ffff">
-                    <img src="../icons/Deposito.jpg" class="icono">
+                    <img src="https://i.ibb.co/tzctfVL/Deposito.jpg" class="icono">
                     <v-col>
                         <v-btn size="x-large"  variant="text" style="color:#ffff;width:100%">
                             Depositos
@@ -70,7 +70,7 @@
                     </v-col>
                 </div>
                 <div class="d-flex align-center" style="border-bottom: 2px solid #ffff">
-                    <img src="../icons/Comision.jpg" class="icono">
+                    <img src="https://i.ibb.co/BTQQxxt/Comision.jpg" class="icono">
                     <v-col>
                         <v-btn size="x-large" variant="text" style="color:#ffff;width:100%">
                             Comisiones

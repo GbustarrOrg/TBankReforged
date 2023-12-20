@@ -14,21 +14,21 @@ const cerrarSesion = async () => {
     <div>
         <div class="top-panel">
             <div class="logo">
-                <img src="../icons/logo.png" class="logo-icono">
+                <img src="https://i.ibb.co/RjXLYpS/logo.png" class="logo-icono">
                 <div class="text-container">
                     <p class="logo-text">Tusunami</p>
                     <p class="subtitle">"No lo vimos venir"</p>
                 </div>
-                <img src="../icons/estrella.png" class="star-icono">
+                <img src="https://i.ibb.co/kSMTjWs/estrella.png" class="star-icono">
             </div>
             <div class="spacer"></div>
             <div class="boton-container">
                 <Button class="boton" label="Sucursales" :ripple="false" />
                 <div class="vertical-line"></div>
                 <p style="margin-right: 20px;">Hola, Sebastián Piñera</p>
-                <img src="../icons/choripan.jpg" class="rounded-icono">
+                <img src="https://i.ibb.co/d7Tcthb/choripan.jpg" class="rounded-icono">
                 <button class="boton-cerrar" @click="cerrarSesion">
-                    <img src="../icons/cerrar.png" alt="Cerrar" class="cerrar-icono">
+                    <img src="https://i.ibb.co/Bzh0Mdq/cerrar.png" alt="Cerrar" class="cerrar-icono">
                 </button>
             </div>
         </div>
