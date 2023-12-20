@@ -1,8 +1,8 @@
 <template>
   <div class="creacion">
-    <v-card title="" text="" variant="tonal" style="width: 90; border-radius: 20px">
+    <v-card title="" text="" variant="tonal" style="width: 90; border-radius: 20px; ">
       <table>
-        <tr style="width: 100%">
+        <tr style="width: 100%; background-color: white;">
           <td style="width: 50vw">
             <h1 style="text-align: justify; padding: 5%; color: #0039A6;">Cuenta Corriente</h1>
             <h4 style="text-align: justify; padding: 5%; color: #0039A6;">
@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .creacion {
-  background-color: #f5f5f5;
+  background-color: #d9d9d9;
   color: black;
   width: 100vw;
   height: 100vh;
